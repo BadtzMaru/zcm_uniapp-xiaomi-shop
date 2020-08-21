@@ -1,0 +1,23 @@
+/* 设置全局样式 */
+page{
+	height: 100%;
+	font-size: 28rpx;
+	line-height: 1.8;
+	background-color: #FFFFFF;
+}
+image{
+	width: 100%;
+}
+
+/* 主背景颜色（橙色）*/
+.main-bg-color{ background-color: #FD6801; }
+/* 主点击背景颜色（淡橙色）*/
+.main-bg-hover-color{ background-color: rgba(253,104,1,0.85); }
+/* 主字体颜色（橙色）*/
+.main-text-color{color: #FD6801;}
+/* 主边框颜色 */
+.main-border-color{ border-color: #F1F1F1; }
+
+.input-border-color{
+	border-color: #FD6801;
+}

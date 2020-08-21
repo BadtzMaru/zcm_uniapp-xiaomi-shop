@@ -1,0 +1,26 @@
+<template>
+	<div class="row w-100 px-2">
+		<div v-for="(item,index) in indexNavs" :key="index" class="j-center a-center mt-3 index-nav">
+			<image :src="item.src" class="index-nav-image"></image>
+			<text class="font text-muted mt-1">{{item.text}}</text>
+		</div>
+	</div>
+</template>
+
+<script>
+	export default {
+		props: {
+			indexNavs: Array,
+		}
+	}
+</script>
+
+<style src="@/common/zcm-main-nvue.css"></style>
+<style>
+	.index-nav{
+		width: 142px;
+	}
+	.index-nav-image{
+		width: 58px;height: 58px;
+	}
+</style>

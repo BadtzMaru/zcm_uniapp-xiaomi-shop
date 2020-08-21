@@ -1,0 +1,45 @@
+<template>
+	<div class="col-6 common-list mb-1" @click="openDetail">
+		<image :src="item.cover" class="common-list-cover"></image>
+		<text class="font-md text-dark px-2 py-1 common-list-lines">{{item.title}}</text>
+		<text class="px-2 font text-light-muted common-list-lines">{{item.desc}}</text>
+		<div class="px-2 pt-1 row a-end">
+			<price>{{item.pprice}}</price>
+			<text class="line-through text-light-muted ml-1 font-sm common-list-oprice">${{item.oprice}}</text>
+		</div>
+	</div>
+</template>
+
+<script>
+	import price from '@/components/common/price.nvue'
+	export default {
+		components: {
+			price
+		},
+		props: {
+			item: Object
+		},
+		methods: {
+			openDetail() {
+				uni.navigateTo({
+					url:'/pages/detail/detail'
+				})
+			}
+		}
+	}
+</script>
+
+<style src="@/common/zcm-main-nvue.css"></style>
+<style>
+	.common-list{
+		padding-left: 2.5px;
+		padding-right: 2.5px;
+	}
+	.common-list-cover{
+		width: 370px;
+		height: 370px;
+	}
+	.common-list-lines{
+		lines: 1;
+	}
+</style>
