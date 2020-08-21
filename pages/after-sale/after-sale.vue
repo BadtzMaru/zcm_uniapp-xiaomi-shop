@@ -16,7 +16,10 @@
 		</card>
 		<divider></divider>
 		<card headTitle="问题描述" bodyPadding cardStyle="background:#ffffff;">
-			<textarea class="border rounded p-2" placeholder="请详细买描述你遇到的问题" :maxlength="200" style="width: 100%;height: 300rpx;box-sizing: border-box;"/>
+			<view class="position-relative">
+				<textarea class="border rounded p-2" placeholder="请详细买描述你遇到的问题" :maxlength="maxlength" style="width: 100%;height: 300rpx;box-sizing: border-box;" v-model="content"/>
+				<view class="position-absolute font" style="right: 10rpx;bottom: 5rpx;" :class="remain>0?'text-light-muted':'text-danger'">{{content.length}}/{{maxlength}}</view>
+			</view>
 		</card>
 		<view class="p-3">
 			<view class="rounded main-bg-color text-white text-center py-2 font-md" hover-class="main-bg-hover-color">下一步</view>
@@ -40,7 +43,15 @@
 						{name: '维修'},
 					],
 				},
+				content: '',
+				maxlength: 50,
 			}
+		},
+		computed: {
+			// 剩余可输入字数
+			remain() {
+				return this.maxlength - this.content.length;
+			},
 		},
 		methods: {
 			

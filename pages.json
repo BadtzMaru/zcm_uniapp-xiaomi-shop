@@ -315,6 +315,12 @@
 				"navigationBarTitleText":"申请售后"
 			}
         }
+        ,{
+            "path" : "pages/about/about",
+            "style" : {
+				"navigationBarTitleText":"关于小米商城"
+			}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
